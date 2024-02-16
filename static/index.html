@@ -30,7 +30,7 @@
     </div>
     <h1>Watch Party</h1>
     <h2>2</h2>
-    <button class="create">Create a Room</button> <!-- TODO: Show me only to logged-in users -->
+    <button id="create_room" class="create">Create a Room</button> <!-- TODO: Show me only to logged-in users -->
     <button class="signup">Signup</button> <!-- TODO: Show me only to logged-out users -->
   </div>
 
@@ -61,14 +61,14 @@
       <h2>Welcome to Watch Party!</h2>
       <div class="alignedForm">
         <label for="username">Username: </label>
-        <input name="username" value="{{ username }}">
-        <button>update</button>
+        <input id="updateusernameInput"name="username" value="{{ username }}">
+        <button id="updateusername">update</button>
         <label for="password">Password: </label>
-        <input type="password" name="password" value="{{ password }}">
-        <button>update</button>
+        <input id="updatepasswordInput" type="password" name="password" value="{{ password }}">
+        <button id="updatepassword">update</button>
         <label for="repeatPassword">Repeat: </label>
-        <input type="password" name="repeatPassword" value="{{ password }}">
-        <error>Passwords don't match</error>
+        <input id="repeatpasswordInput" type="password" name="repeatPassword" value="{{ password }}">
+        <error id="passwordnomatch">Passwords don't match</error>
         <button class="exit goToSplash">Cool, let's go!</button>
         <button class="exit logout">Log out</button>
       </div>
@@ -86,16 +86,16 @@
       <h3>Enter your username and password to log in:</h3>
       <div class="alignedForm login">
         <label for="username">Username</label>
-        <input name="username"></input>
-        <button>Login</button>
-        <label for="password">Password</label>
-        <input type="password" name="password">
+        <input id="usernameLogin" name="username"></input>
+        <button id="userlogin">Login</button>
+        <label  for="password">Password</label>
+        <input id="usernamePass"type="password" name="password">
       </div>
       <div class="failed"> <!-- TODO: Hide me by default. Show only on failed login attempts -->
-        <div class="message">
+        <div id="failmessagelogin" class="message">
           Oops, that username and password don't match any of our users!
         </div>
-        <button>Create a new Account</button>
+        <button id="createUsers" class="createAccount">Create a new Account</button>
       </div>
     </div>
   </div>
